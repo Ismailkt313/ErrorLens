@@ -92,8 +92,8 @@ This project demonstrates:
 
 ## 🔗 Live Demo
 
-(Add your deployed link here)
+ will add later
 
 ## 📷 Preview
-
-(Add screenshots or demo GIF here)
+ 
+will add later
