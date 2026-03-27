@@ -9,7 +9,7 @@ import {
   ChevronRight,
   ShieldCheck
 } from "lucide-react";
-
+const API_URL = import.meta.env.VITE_API_URL
 type Result = {
   explanation: string;
   rootCause: string;
@@ -30,7 +30,8 @@ export default function Home() {
     setResult(null);
 
     try {
-      const res = await fetch("http://localhost:3000/api/analyze", {
+      console.log('API_URL checking',API_URL)
+      const res = await fetch(`${API_URL}/api/analyze`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
