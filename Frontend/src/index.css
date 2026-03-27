@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0f172a;
+  --color-card: #1e293b;
+  --color-accent: #3b82f6;
+  --color-danger: #ef4444;
+  --color-success: #22c55e;
+}
+
+:root {
+  --background: #0f172a;
+  --card: #1e293b;
+  --accent: #3b82f6;
+  --danger: #ef4444;
+  --success: #22c55e;
+}
+
+body {
+  @apply bg-slate-950 text-slate-100 antialiased font-sans transition-colors duration-300;
+}
+
+/* Custom scrollbar for modern feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-700 rounded-full hover:bg-slate-600 transition-colors;
+}
+
+/* Base animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-fast {
+  animation: spin 0.8s linear infinite;
+}
